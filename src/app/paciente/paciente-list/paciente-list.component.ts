@@ -11,6 +11,9 @@ export class PacienteListComponent implements OnInit {
 
   pacientes: Array<Paciente> = [];
 
+  selectedPaciente!: Paciente;
+  selected: Boolean = false;
+
  //Var para contar mis pacientes menorss de edad
   cantidadMenores: number = 0;
 
@@ -32,6 +35,11 @@ export class PacienteListComponent implements OnInit {
       }
     }
     
+  }
+
+  onSelected(paciente: Paciente): void {
+    this.selected = true;
+    this.selectedPaciente = paciente;
   }
 
 

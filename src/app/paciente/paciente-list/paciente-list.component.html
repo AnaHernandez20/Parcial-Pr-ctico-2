@@ -19,7 +19,7 @@
         <!-- coleccion es un atributo que DEBE estar definido en el componente -->
  
         <tr *ngFor="let paciente of pacientes">
-          <td class="columna-gris">
+          <td class="columna-gris" (click)="onSelected(paciente)">
             {{paciente.nombre}}
           </td>
           <td  class="name-contenido columna-gris">
@@ -34,5 +34,12 @@
 
 
   </div>
+
+  <div class="col-md-3">
+    <div *ngIf="selectedPaciente">
+      <app-paciente-detail [pacienteDetail]="selectedPaciente"></app-paciente-detail>
+    </div>
+  </div>
+  
 </div>
 </div>
