@@ -1,7 +1,7 @@
 .header {
     display: flex; /*para poder alinear las cosas horizontal*/
     align-items: center; /*para poder alinear las cosas x2*/
-    background-color: #4fa0b4; 
+    background-color: #5071be; 
     color: white; 
     padding: 8px; /*para rellenar*/
     border-radius: 0; /*cuadradoo*/
