@@ -1,0 +1,38 @@
+<!--Esta es la vista de su respectivo componente/controlador-->
+<!--Solo con la parte HTML que se necesita, no todo-->
+
+<div class ="container">
+<div class="row">
+          
+  <!-- Columna de la tabla -->
+  <div class="col-md-5">
+      <table class="table personalizada">
+          <thead>
+              <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Edad</th>
+              </tr>
+          </thead>
+      
+        <!--Usamos ciclos dentro de HTML lol-->
+        <!--*ngFor="let iter of coleccion", iter es una variable local al ciclo y -->
+        <!-- coleccion es un atributo que DEBE estar definido en el componente -->
+ 
+        <tr *ngFor="let paciente of pacientes">
+          <td class="columna-gris">
+            {{paciente.nombre}}
+          </td>
+          <td  class="name-contenido columna-gris">
+            {{paciente.edad}}
+          </td>
+      </tr>
+
+     
+    </table>
+
+    <p style="font-weight: bold"  class="promedio">Número de menores: {{cantidadMenores}}</p>
+
+
+  </div>
+</div>
+</div>
